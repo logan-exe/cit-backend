@@ -277,7 +277,7 @@ exports.getTokenInfo = async (req, res, next) => {
 
 exports.getNfts = async (req, res) => {
   console.log(req.body);
-  const Nfts = await Nft.find().sort({ _id: -1 }).limit(6);
+  const Nfts = await Nft.find().sort({ _id: -1 }).limit(8);
 
   res.status(200).json({
     message: "success",
