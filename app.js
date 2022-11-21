@@ -11,7 +11,7 @@ const restrictMiddleWare = require("./middlewares/check-auth");
 
 const userRoutes = require("./routes/userRoutes");
 const nftRoutes = require("./routes/nftRoutes");
-const testRoutes = require("./routes/testRoutes");
+// const testRoutes = require("./routes/testRoutes");
 
 const mongoConnect = require("./util/database");
 const User = require("./models/User");
@@ -20,27 +20,12 @@ const Nft = require("./models/Nft");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-//sdf
-// var whitelist = ["https://brute-nft.web.app/", "http://localhost:3000"];
-// var corsOptions = {
-//   origin: function (origin, callback) {
-//     /////////********** Production - (whitelist.indexOf(origin) !== -1 && origin)**************////////
-//     if (whitelist.indexOf(origin) !== -1 || !origin) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error("Not allowed by CORS"));
-//     }
-//   },
-// };
-
-// app.use(cors(corsOptions));
-
 app.use(cors());
 
 app.use(userRoutes);
 // app.use(restrictMiddleWare);
 app.use(nftRoutes);
-app.use(testRoutes);
+// app.use(testRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello world! Welcome to CIT");

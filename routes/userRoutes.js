@@ -17,7 +17,7 @@ router.post("/create_follower", UserController.createFollower);
 router.post("/remove_follower", UserController.removeFollower);
 router.post("/get_owned_nfts", UserController.getOwnedNfts);
 router.post("/get_user_activity", UserController.getUserActivity);
-// // router.post("/create_user", UserController.saveUser);
+// router.post("/create_user", UserController.saveUser);
 
 // router.post("/create_new_collectible", UserController.createCollectibles);
 
@@ -29,9 +29,9 @@ router.post("/get_user_activity", UserController.getUserActivity);
 
 // router.post("/add_token_info", UserController.addTokenInfo);
 
-// // router.post("/update_many", UserController.updateMany);
+// router.post("/update_many", UserController.updateMany);
 
-router.post("/update_user_info", UserController.updateUserInfo);
+// router.post("/update_user_info", UserController.updateUserInfo);
 
 // router.post("/stop_collectible_sale", UserController.stopCollectibleSale);
 // router.post("/stop_nft_sale", UserController.stopNftSale);
@@ -77,17 +77,17 @@ router.post("/update_user_info", UserController.updateUserInfo);
 
 // router.get("/get_activities", UserController.getActivities);
 
-// router.get("/top_auction");
-// router.get("/top_sale");
+router.get("/top_auction");
+router.get("/top_sale");
 
-// router.post("/get_top_playlist");
+router.post("/get_top_playlist");
 
-// router.post("/get_top_music");
+router.post("/get_top_music");
 
-// router.post("/get_top_art");
+router.post("/get_top_art");
 
-// router.post("/get_live_auction");
+router.post("/get_live_auction");
 
-// router.post("/");
+router.post("/");
 
 module.exports = router;
